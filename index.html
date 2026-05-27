@@ -6,6 +6,7 @@
 <title>SmileBox — Formation & Coaching · Madagascar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="uploads/optimized/hero.jpg" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -258,9 +259,26 @@ footer{background:var(--ink2);color:var(--white);padding:5.5rem 5% 3rem}
   .ft-gr{grid-template-columns:1fr 1fr;gap:2.5rem}
 }
 @media(max-width:768px){
-  nav{padding:1.25rem 5%}
+  html,body{max-width:100%;overflow-x:hidden}
+  nav{width:100vw;padding:1.25rem 1rem;gap:.75rem}
+  .logo-light{font-size:1.25rem;flex-shrink:0}
   .nav-ul{display:none}
-  .hero-h{font-size:clamp(2.8rem,12vw,5rem)}
+  .nav-r{gap:.55rem;min-width:0;margin-left:auto;flex-shrink:0}
+  .lpill{flex-shrink:0}
+  nav .btn-pill{display:none}
+  .btn-pill{padding:.55rem 1rem;font-size:.76rem}
+  .hero{padding-left:1rem;padding-right:1rem}
+  .hero-c{width:100%;max-width:100%}
+  .hero-badge{display:flex;width:min(100%,340px);max-width:100%;justify-content:center;padding:7px 12px;font-size:.62rem;line-height:1.45;white-space:normal}
+  .hero-badge span:last-child{min-width:0;text-align:center;overflow-wrap:anywhere}
+  .hero-h{font-size:clamp(2.35rem,14vw,4rem);line-height:1.05;max-width:100%}
+  .hero-h .hw{display:block}
+  .hero-ctas{flex-direction:column;width:100%}
+  .btn-h,.btn-g{width:min(100%,280px);justify-content:center;text-align:center}
+  .hero-proof{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.5rem;width:100%;max-width:320px;margin:2rem auto 0}
+  .proof-sep{display:none}
+  .proof-num{font-size:1.45rem}
+  .proof-lbl{font-size:.52rem;overflow-wrap:anywhere}
   .ab-gr{grid-template-columns:1fr;gap:3rem}
   .svcs-gr,.fms-gr{grid-template-columns:1fr}
   .svcs-hd,.fms-hd,.tst-hd{flex-direction:column;align-items:flex-start}
@@ -272,6 +290,10 @@ footer{background:var(--ink2);color:var(--white);padding:5.5rem 5% 3rem}
   .gi4{grid-column:1 2}
   .hero-proof{gap:1.25rem}
 }
+@media(max-width:480px){
+  .hero-h{font-size:clamp(2.15rem,13vw,3.25rem)}
+  .hero-sub{font-size:.92rem}
+}
 </style>
 </head>
 <body>
@@ -279,7 +301,7 @@ footer{background:var(--ink2);color:var(--white);padding:5.5rem 5% 3rem}
 <!-- NAV -->
 <nav id="nav">
   <div class="logo-light"><span class="sm">Smile</span><span class="bx">BOX</span></div>
-  <div class="logo-dark"><img id="logo-img" alt="SmileBox"></div>
+  <div class="logo-dark"><img id="logo-img" alt="SmileBox" width="420" height="420" decoding="async"></div>
   <ul class="nav-ul">
     <li><a href="#services" data-k="ns">Services</a></li>
     <li><a href="#about" data-k="na">À propos</a></li>
@@ -297,7 +319,7 @@ footer{background:var(--ink2);color:var(--white);padding:5.5rem 5% 3rem}
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-bg"><img id="hero-img" alt="SmileBox"></div>
+  <div class="hero-bg"><img id="hero-img" alt="SmileBox" width="1448" height="1086" fetchpriority="high" decoding="async"></div>
   <div class="hero-ov"></div>
   <div class="hero-c">
     <div class="hero-badge"><span class="bdot"></span><span data-k="hb">Madagascar · RH · Offshoring · Formation · Coaching</span></div>
@@ -362,10 +384,10 @@ footer{background:var(--ink2);color:var(--white);padding:5.5rem 5% 3rem}
     <h2 class="stit" data-k="glt">L'humain au cœur<br>de chaque intervention</h2>
   </div>
   <div class="gal-gr">
-    <div class="gi gi1 rvl"><img id="g1" alt=""><div class="gi-cap"><span class="gi-tag">Team Building</span><div class="gi-cap-txt">Renforcement collectif · 200+ participants</div></div></div>
-    <div class="gi gi2 rv d1"><img id="g2" alt=""><div class="gi-cap"><span class="gi-tag">Formation</span><div class="gi-cap-txt">Sessions de développement managérial</div></div></div>
-    <div class="gi gi3 rv d2"><img id="g3" alt=""><div class="gi-cap"><span class="gi-tag">Boost Camp</span><div class="gi-cap-txt">Coaching intensif d'équipe</div></div></div>
-    <div class="gi gi4 rvr d1"><img id="g4" alt=""><div class="gi-cap"><span class="gi-tag">Certification</span><div class="gi-cap-txt">Remise de diplômes · Ciel Madagascar</div></div></div>
+    <div class="gi gi1 rvl"><img id="g1" alt="" width="1200" height="900" loading="lazy" decoding="async"><div class="gi-cap"><span class="gi-tag">Team Building</span><div class="gi-cap-txt">Renforcement collectif · 200+ participants</div></div></div>
+    <div class="gi gi2 rv d1"><img id="g2" alt="" width="900" height="675" loading="lazy" decoding="async"><div class="gi-cap"><span class="gi-tag">Formation</span><div class="gi-cap-txt">Sessions de développement managérial</div></div></div>
+    <div class="gi gi3 rv d2"><img id="g3" alt="" width="700" height="525" loading="lazy" decoding="async"><div class="gi-cap"><span class="gi-tag">Boost Camp</span><div class="gi-cap-txt">Coaching intensif d'équipe</div></div></div>
+    <div class="gi gi4 rvr d1"><img id="g4" alt="" width="1100" height="825" loading="lazy" decoding="async"><div class="gi-cap"><span class="gi-tag">Certification</span><div class="gi-cap-txt">Remise de diplômes · Ciel Madagascar</div></div></div>
   </div>
 </section>
 
@@ -374,7 +396,7 @@ footer{background:var(--ink2);color:var(--white);padding:5.5rem 5% 3rem}
   <div class="ab-gr">
     <div class="rvz">
       <div class="ab-img">
-        <img id="ab-img" alt="L'équipe SmileBox">
+        <img id="ab-img" alt="L'équipe SmileBox" width="1100" height="825" loading="lazy" decoding="async">
         <div class="ab-badge">
           <div class="ab-num">10+</div>
           <div class="ab-btxt" data-k="byr">ans d'expérience<br>à Madagascar</div>
@@ -439,7 +461,7 @@ footer{background:var(--ink2);color:var(--white);padding:5.5rem 5% 3rem}
 <footer>
   <div class="ft-gr">
     <div>
-      <a href="#" class="ft-lo"><img id="ft-logo" alt="SmileBox"></a>
+      <a href="#" class="ft-lo"><img id="ft-logo" alt="SmileBox" width="420" height="420" loading="lazy" decoding="async"></a>
       <p class="ft-de" data-k="ftd">Expert en Externalisation RH, Offshoring et Formation &amp; Coaching à Madagascar depuis 2014.</p>
       <div class="ft-soc">
         <a href="https://facebook.com" class="ft-si">F</a>
@@ -464,17 +486,16 @@ footer{background:var(--ink2);color:var(--white);padding:5.5rem 5% 3rem}
 
 <script>
 // ── IMAGE PATHS ───────────────────────────────────────
-const _p = s => s.replace(/ /g,'%20').replace(/,/g,'%2C').replace(/\(/g,'%28').replace(/\)/g,'%29');
 const IMG = {
-  logo:  _p('uploads/ChatGPT Image 24 mai 2026, 18_35_55.png'),
-  hero:  _p('uploads/ChatGPT Image 24 mai 2026, 19_25_46 (3).png'),
-  about: _p('uploads/ChatGPT Image 24 mai 2026, 19_25_47 (5).png'),
-  g1:    _p('uploads/ChatGPT Image 24 mai 2026, 19_25_48 (6).png'),
-  g2:    _p('uploads/ChatGPT Image 24 mai 2026, 19_25_46 (2).png'),
-  g3:    _p('uploads/ChatGPT Image 24 mai 2026, 19_25_46 (4).png'),
-  g4:    _p('uploads/ChatGPT Image 24 mai 2026, 19_25_45 (1).png'),
-  f1:    _p('uploads/ChatGPT Image 24 mai 2026, 19_25_45 (1).png'),
-  f2:    _p('uploads/ChatGPT Image 24 mai 2026, 19_25_47 (5).png'),
+  logo:  'uploads/optimized/logo.jpg',
+  hero:  'uploads/optimized/hero.jpg',
+  about: 'uploads/optimized/about.jpg',
+  g1:    'uploads/optimized/gallery-1.jpg',
+  g2:    'uploads/optimized/gallery-2.jpg',
+  g3:    'uploads/optimized/gallery-3.jpg',
+  g4:    'uploads/optimized/gallery-4.jpg',
+  f1:    'uploads/optimized/formation-1.jpg',
+  f2:    'uploads/optimized/formation-2.jpg',
 };
 const si = (id,s) => { const e=document.getElementById(id); if(e) e.src=s; };
 si('logo-img',IMG.logo); si('ft-logo',IMG.logo);
@@ -617,7 +638,7 @@ function buildFS(l){
   g.innerHTML=FS[l].map((f,i)=>`
     <div class="fc rv d${i+1}">
       <div class="fc-th">
-        ${f.img?`<img src="${f.img}" alt="${f.t}" style="width:100%;height:100%;object-fit:cover;object-position:center top">`:
+        ${f.img?`<img src="${f.img}" alt="${f.t}" width="900" height="675" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center top">`:
         '<div style="position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent,transparent 8px,rgba(0,0,0,.03) 8px,rgba(0,0,0,.03) 16px);display:flex;align-items:center;justify-content:center"><span style=\'font-family:monospace;font-size:.65rem;color:#aaa\'>photo formation</span></div>'}
         <span class="fc-bdg ${f.bc}">${f.b}</span>
       </div>
